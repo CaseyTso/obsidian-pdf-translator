@@ -1,0 +1,24 @@
+{
+	"name": "obsidian-pdf-translator",
+	"version": "1.0.0",
+	"description": "划词翻译 Obsidian 内置 PDF 阅读器中的文本。",
+	"main": "main.js",
+	"type": "module",
+	"scripts": {
+		"dev": "node esbuild.config.mjs",
+		"build": "npm run typecheck && node esbuild.config.mjs production",
+		"typecheck": "tsc -noEmit -skipLibCheck",
+		"test": "vitest run"
+	},
+	"license": "AGPL-3.0",
+	"devDependencies": {
+		"@types/node": "^22.0.0",
+		"esbuild": "0.25.5",
+		"tslib": "2.4.0",
+		"typescript": "^5.8.3",
+		"vitest": "^3.0.0"
+	},
+	"dependencies": {
+		"obsidian": "latest"
+	}
+}

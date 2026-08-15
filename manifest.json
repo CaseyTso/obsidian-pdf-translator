@@ -1,0 +1,9 @@
+{
+	"id": "obsidian-pdf-translator",
+	"name": "PDF Translator",
+	"version": "1.0.0",
+	"minAppVersion": "1.4.0",
+	"description": "在 Obsidian 内置 PDF 阅读器中划词翻译，译文以弹窗显示。支持 Google Translate 与 OpenAI 兼容 LLM。",
+	"author": "CaseyTso",
+	"isDesktopOnly": true
+}
