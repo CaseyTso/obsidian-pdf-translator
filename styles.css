@@ -11,6 +11,8 @@
 	flex-direction: column;
 	gap: 6px;
 	overflow: hidden;
+	user-select: none;
+	-webkit-user-select: none;
 }
 
 .pdf-translator-popup__body {
@@ -26,6 +28,9 @@
 	height: 100%;
 	min-height: 0;
 	overflow-y: auto;
+	user-select: text;
+	-webkit-user-select: text;
+	cursor: text;
 }
 
 .pdf-translator-popup__result.pdf-translator-popup__loading {

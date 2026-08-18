@@ -75,6 +75,8 @@ export default class PdfTranslatorPlugin extends Plugin {
 	}
 
 	private scheduleTranslation(): void {
+		const selection = activeDocument.getSelection();
+		if (this.popup.isSelectionInsidePopup(selection)) return; // 弹窗内选区只用于复制，不触发翻译
 		window.clearTimeout(this.selectionTimer);
 		this.selectionTimer = window.setTimeout(() => void this.translateCurrentSelection(), 350);
 	}

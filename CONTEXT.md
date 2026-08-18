@@ -9,8 +9,12 @@ Obsidian 插件：在内置 PDF 阅读器中划词翻译，弹窗显示结果。
 _Avoid_: PDF annotation translation, note translation, manual translation
 
 **翻译弹窗 (Translation Popup)**：
-划词后浮在 PDF 页面上的译文气泡，不重复显示原文；支持复制译文与重新翻译。
+划词后浮在 PDF 页面上的译文气泡，不重复显示原文；支持复制整段译文、重新翻译，译文与错误信息可选中并原生复制。
 _Avoid_: tooltip, overlay, floating panel
+
+**弹窗内选区 (Popup Selection)**：
+位于翻译弹窗内的文本选择，用户可选中并复制；它不构成「当前划词」，不得触发新翻译或关闭弹窗。
+_Avoid_: selection inside popup, active selection
 
 **当前划词 (Current Selection)**：
 PDF 阅读器中最近一次有效的文本选择，也是唯一允许更新翻译弹窗的请求对象。

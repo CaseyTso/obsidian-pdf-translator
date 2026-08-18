@@ -1,6 +1,7 @@
 import { setIcon } from "obsidian";
 import { CopyFeedbackController } from "./copyFeedback";
 import { clampBoundsToWindow, clampPopupToBounds, computePopupPlacement, type PopupBox } from "./popupGeometry";
+import { selectionBelongsToPopup } from "./popupSelection";
 import type { PdfTextSelection } from "./types";
 
 type PopupState = "loading" | "success" | "error";
@@ -73,6 +74,10 @@ export class TranslationPopup {
 
 	containsTarget(target: EventTarget | null): boolean {
 		return target instanceof Node && this.rootEl.contains(target);
+	}
+
+	isSelectionInsidePopup(selection: Selection | null | undefined): boolean {
+		return selectionBelongsToPopup(selection, this.rootEl);
 	}
 
 	destroy(): void {
