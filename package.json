@@ -1,6 +1,6 @@
 {
 	"name": "obsidian-pdf-translator",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"description": "划词翻译 Obsidian 内置 PDF 阅读器中的文本。",
 	"main": "main.js",
 	"type": "module",
